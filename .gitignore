@@ -1,0 +1,32 @@
+# build
+*.tar.gz
+dependency-reduced-pom.xml
+scratch
+target
+
+# ui build
+uis/layover/bower_components/
+uis/layover/dist/
+**/node/
+**/node_modules/
+**/build/
+**/npm-debug.log
+
+# eclipse
+.classpath
+.project
+.settings
+
+# idea
+.idea
+*.iml
+*.iws
+*.ipr
+
+
+# local ftests log
+**/test.home_IS_UNDEFINED/*
+
+*.dat
+
+.vscode/
