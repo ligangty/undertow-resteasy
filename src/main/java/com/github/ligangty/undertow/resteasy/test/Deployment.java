@@ -2,6 +2,7 @@ package com.github.ligangty.undertow.resteasy.test;
 
 import com.github.ligangty.undertow.resteasy.test.instance.Resources;
 import com.github.ligangty.undertow.resteasy.test.instance.RestProvider;
+import com.github.ligangty.undertow.resteasy.test.rest.SimpleResourceDynamicFeature;
 import io.undertow.servlet.Servlets;
 import io.undertow.servlet.api.DeploymentInfo;
 import io.undertow.servlet.api.ServletInfo;
@@ -58,12 +59,11 @@ public class Deployment
             resourceClasses.add( indyResources.getClass() );
         }
 
-        providerClasses = new HashSet<>();
-        for ( final RestProvider restProvider : providerInstances )
-        {
-            providerClasses.add( restProvider.getClass() );
-        }
-
+//        providerClasses = new HashSet<>();
+//        for ( final RestProvider restProvider : providerInstances )
+//        {
+//            providerClasses.add( restProvider.getClass() );
+//        }
         classes = getClasses();
     }
 
@@ -100,7 +100,9 @@ public class Deployment
     public Set<Class<?>> getClasses()
     {
         final Set<Class<?>> classes = new LinkedHashSet<>( resourceClasses );
-        classes.addAll( providerClasses );
+//        classes.addAll( providerClasses );
+//        classes.add(SimpleResourceResponseRewriteFilter.class);
+        classes.add( SimpleResourceDynamicFeature.class);
         return classes;
     }
 }

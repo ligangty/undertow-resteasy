@@ -16,6 +16,7 @@
 package com.github.ligangty.undertow.resteasy.test.rest;
 
 import com.github.ligangty.undertow.resteasy.test.instance.Resources;
+import com.github.ligangty.undertow.resteasy.test.instance.RestProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +30,7 @@ import javax.ws.rs.ext.Provider;
 @ApplicationScoped
 @SimpleResourceBinding
 public class SimpleResourceResponseRewriteFilter
-        implements ContainerResponseFilter, Resources
+        implements ContainerResponseFilter, RestProvider
 {
     private final Logger logger = LoggerFactory.getLogger( getClass() );
 

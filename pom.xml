@@ -18,7 +18,7 @@
     <resteasyVersion>4.0.0.Beta5</resteasyVersion>
     <jaxrsVersion>3.0.12.Final</jaxrsVersion>
     <resteasyServletVersion>3.0.19.Final</resteasyServletVersion>
-    <undertowVersion>2.0.1.Final</undertowVersion>
+    <undertowVersion>2.0.30.Final</undertowVersion>
     <xnioVersion>3.3.0.Final</xnioVersion>
     <logbackVersion>1.2.3</logbackVersion>
     <logbackContribVersion>0.1.5</logbackContribVersion>
